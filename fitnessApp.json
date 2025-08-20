@@ -1,0 +1,23 @@
+{
+   "name": "Fitness App",
+   "description": "A simple fitness tracking application",
+   "baseURL": "http://localhost:4000",
+   "routes": {
+      "users":{
+         "endpoints": {
+            "register": { "method": "POST", "path": "/users/register" },
+            "login": { "method": "POST", "path": "/users/login" },
+            "details": { "method": "GET", "path": "/users/details" }
+         }
+      },
+      "workouts": {
+         "endpoints": {
+            "addWorkout": { "method": "POST", "path": "/workouts/addWorkout" },
+            "getMyWorkouts": { "method": "GET", "path": "/workouts/getMyWorkouts" },
+            "completeWorkoutStatus": { "method": "PATCH", "path": "/workouts/completeWorkoutStatus/:id" },
+            "updateWorkout": { "method": "PATCH", "path": "/workouts/updateWorkout/:id" },
+            "deleteWorkout": { "method": "DELETE", "path": "/workouts/deleteWorkout/:id" }
+         }
+      }
+   }
+}
